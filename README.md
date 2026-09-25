@@ -30,6 +30,101 @@ Diseñado siguiendo el sistema de identidad visual **2627 QFDOS Structural Affin
 
 ---
 
+## 🧭 Arquitectura Multi-Tema
+
+El repositorio está diseñado con un núcleo modular que desacopla la lógica de visualización del contenido:
+
+```
+qfdos-cartas/
+├── index.html                   # Interfaz de usuario accesible y responsiva
+├── app.js                       # Lógica de aplicación modular (carga, enrutamiento hash, filtros)
+├── styles.css                   # Sistema de diseño, rejilla 3D y modos Limpio/Marino
+├── tokens.css                   # Variables de diseño (colores, fuentes, radios)
+├── data/
+│   ├── temas.json               # Manifiesto central con los 10 temas del programa
+│   └── farmacos-tema01.json     # Monografías del Tema 01 (Colinérgicos)
+└── estructuras/                 # Archivos vectoriales SVG de cada molécula
+```
+
+### Enrutamiento Directo por Hash (Deep-linking)
+La aplicación permite enlaces directos a cada tema mediante fragmentos de URL, ideales para compartir en PRADO, diapositivas o códigos QR:
+- Tema 01: `https://jjdmochon.github.io/qfdos-cartas/#tema-01`
+- Tema 02: `https://jjdmochon.github.io/qfdos-cartas/#tema-02`
+
+---
+
+## 🛠️ Cómo Añadir Nuevos Temas conforme Avance el Curso
+
+El sistema genera dinámicamente los botones de filtrado farmacológico a partir de los datos cargados. Para publicar un nuevo tema basta con seguir 3 pasos:
+
+### 1. Crear el archivo de datos del tema
+Crear `data/farmacos-temaNN.json` (por ejemplo, `data/farmacos-tema02.json`) siguiendo el esquema:
+```json
+{
+  "tema": 2,
+  "titulo": "Sistema Adrenérgico",
+  "asignatura": "Química Farmacéutica II (QFDOS)",
+  "curso": "2026/2027",
+  "nota": "Nota docente sobre la escala comparativa 0-99...",
+  "grupos": {
+    "agonista_alfa": "Agonistas α",
+    "agonista_beta": "Agonistas β",
+    "bloqueante_beta": "β-bloqueantes"
+  },
+  "indices": {
+    "AFI": "Afinidad a receptores adrenérgicos",
+    "SEL": "Selectividad de subtipo (ej. β1 vs β2)",
+    "EST": "Estabilidad frente a COMT y MAO",
+    "ORA": "Biodisponibilidad oral",
+    "SNC": "Paso de la barrera hematoencefálica",
+    "DUR": "Duración de acción (SABA vs LABA)"
+  },
+  "farmacos": [
+    {
+      "id": "salbutamol",
+      "nombre": "Salbutamol",
+      "relevancia": 95,
+      "rol": "AGONISTA β2 SELECTIVO",
+      "grupo": "agonista_beta",
+      "badge": "SABA · β2",
+      "clase": "Feniletanolamina · Saligenina",
+      "formula": "C13H21NO3",
+      "masa": 239.31,
+      "smiles": "CC(C)(C)NCC(O)c1ccc(O)c(CO)c1",
+      "estructura": "estructuras/salbutamol.svg",
+      "indices": { "AFI": 88, "SEL": 92, "EST": 80, "ORA": 65, "SNC": 15, "DUR": 55 },
+      "accion": "Agonista selectivo de receptores β2-adrenérgicos...",
+      "indicacion": "Broncoespasmo agudo en asma y EPOC...",
+      "diseno": "El grupo saligenina (hidroximetilo) evita la degradación por COMT...",
+      "examen": "¿Por qué el salbutamol resiste la acción de la COMT conservando la actividad agonista β2?"
+    }
+  ]
+}
+```
+
+### 2. Colocar los archivos SVG
+Depositar los archivos SVG correspondientes en la carpeta `estructuras/` (nombrados con el `id` de cada fármaco, ej. `estructuras/salbutamol.svg`).
+
+### 3. Activar el tema en `data/temas.json`
+Modificar el bloque del tema correspondiente en `data/temas.json`:
+```json
+{
+  "id": "tema-02",
+  "disponible": true,
+  "totalFarmacos": 15
+}
+```
+
+### 4. Desplegar
+```bash
+git add .
+git commit -m "feat(tema-02): publicar baraja de farmacos del tema 02"
+git push origin main
+```
+El portal en GitHub Pages se actualizará automáticamente en menos de un minuto.
+
+---
+
 ## 📚 Catálogo del Tema 01 (Transmisión Colinérgica)
 
 | # | Fármaco | Grupo | Relevancia | Fórmula | Masa (Da) |
@@ -59,6 +154,7 @@ Este repositorio está preparado para ser servido directamente como sitio estát
 - **URL de producción:** [https://jjdmochon.github.io/qfdos-cartas/](https://jjdmochon.github.io/qfdos-cartas/)
 - **Rama:** `main` (raíz `/`)
 - **PWA:** Funciona como aplicación web progresiva con caché fuera de línea.
+- **Acceso:** Libre y abierto, sin inicio de sesión ni contraseña requerida.
 
 ---
 

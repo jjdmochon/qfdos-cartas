@@ -61,8 +61,8 @@
   <section class="hero-section">
     <div class="hero-box">
       <div class="hero-content">
-        <h1>Baraja Coleccionable de Fármacos</h1>
-        <p>
+        <h1 id="hero-topic-title">Baraja Coleccionable de Fármacos</h1>
+        <p id="hero-topic-subtitle">
           Recurso de estudio visual y preparación de exámenes: monografías moleculares 2D con parámetros SAR comparativos (0-99), farmacóforos, acciones, dianas y preguntas clave. Abierto a toda la comunidad estudiantil.
         </p>
       </div>
@@ -70,7 +70,7 @@
       <div class="hero-stats-badge">
         <div class="stat-item">
           <span class="stat-number" id="stat-total-count">15</span>
-          <span class="stat-label">Moléculas</span>
+          <span class="stat-label" id="stat-topic-label">Moléculas</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
@@ -87,57 +87,24 @@
 
     <!-- Navegación por Temas del Programa Oficial -->
     <div class="topic-selector-wrap">
-      <div class="topic-pills-scroll" role="tablist" aria-label="Temas del curso">
-        <button type="button" class="topic-pill is-active" data-topic="tema-01" role="tab" aria-selected="true">
-          <span>Tema 01 · Colinérgicos</span>
-          <span style="font-family: var(--font-mono); font-size: 0.7rem; opacity: 0.9;">(15)</span>
-        </button>
-        <button type="button" class="topic-pill is-disabled" data-topic="tema-02" role="tab" aria-selected="false">
-          <span>Tema 02 · Adrenérgicos</span>
-          <span class="pill-badge-proximamente">Próximamente</span>
-        </button>
-        <button type="button" class="topic-pill is-disabled" data-topic="tema-03" role="tab" aria-selected="false">
-          <span>Tema 03 · Histamina</span>
-          <span class="pill-badge-proximamente">Próximamente</span>
-        </button>
-        <button type="button" class="topic-pill is-disabled" data-topic="tema-04" role="tab" aria-selected="false">
-          <span>Tema 04 · Serotonina</span>
-          <span class="pill-badge-proximamente">Próximamente</span>
-        </button>
-        <button type="button" class="topic-pill is-disabled" data-topic="tema-05" role="tab" aria-selected="false">
-          <span>Tema 05 · SNC</span>
-          <span class="pill-badge-proximamente">Próximamente</span>
-        </button>
-        <button type="button" class="topic-pill is-disabled" data-topic="tema-06" role="tab" aria-selected="false">
-          <span>Tema 06 · Cardiovasculares</span>
-          <span class="pill-badge-proximamente">Próximamente</span>
-        </button>
-        <button type="button" class="topic-pill is-disabled" data-topic="tema-07" role="tab" aria-selected="false">
-          <span>Tema 07 · Antibacterianos</span>
-          <span class="pill-badge-proximamente">Próximamente</span>
-        </button>
+      <div class="topic-pills-scroll" id="topic-pills-scroll" role="tablist" aria-label="Temas del curso">
+        <!-- Renderizado dinámicamente desde data/temas.json -->
       </div>
     </div>
   </section>
 
+  <!-- AVISO METODOLÓGICO Y NOTA DOCENTE POR TEMA -->
+  <div class="topic-notice-bar" id="topic-notice-bar" style="display: none;">
+    <div class="topic-notice-inner">
+      <span class="topic-notice-icon">ℹ️</span>
+      <p class="topic-notice-text" id="topic-notice-text"></p>
+    </div>
+  </div>
+
   <!-- BARRA DE CONTROLES: FILTROS + BÚSQUEDA + ACCIONES -->
   <section class="controls-bar">
     <div class="group-filters" id="group-filters" role="group" aria-label="Filtrar por grupo farmacológico">
-      <button type="button" class="filter-btn active" data-group="todos">
-        Todos <span class="filter-count" data-group-count="todos">15</span>
-      </button>
-      <button type="button" class="filter-btn" data-group="agonista">
-        Agonistas <span class="filter-count" data-group-count="agonista">6</span>
-      </button>
-      <button type="button" class="filter-btn" data-group="ache">
-        Anticolinesterásicos <span class="filter-count" data-group-count="ache">4</span>
-      </button>
-      <button type="button" class="filter-btn" data-group="antidoto">
-        Antídoto <span class="filter-count" data-group-count="antidoto">1</span>
-      </button>
-      <button type="button" class="filter-btn" data-group="antagonista">
-        Antagonistas <span class="filter-count" data-group-count="antagonista">4</span>
-      </button>
+      <!-- Generado dinámicamente según los grupos del tema activo -->
     </div>
 
     <div class="toolbar-actions">

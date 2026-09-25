@@ -1,0 +1,112 @@
+[
+  {
+    "id": "tema-01",
+    "numero": 1,
+    "codigo": "Tema 01",
+    "nombre": "Transmisión Colinérgica",
+    "subtitulo": "Acetilcolina, Agonistas Muscarínicos/Nicotínicos, Inhibidores de AChE y Antagonistas",
+    "descripcion": "Química de la sinapsis colinérgica: regla de Ing de los 5 átomos, agonistas directos, anticolinesterásicos reversibles y pseudo-irreversibles, reactivadores con oximas (pralidoxima) y bloqueantes muscarínicos y de la placa motora.",
+    "archivo": "./data/farmacos-tema01.json",
+    "disponible": true,
+    "totalFarmacos": 15
+  },
+  {
+    "id": "tema-02",
+    "numero": 2,
+    "codigo": "Tema 02",
+    "nombre": "Sistema Adrenérgico",
+    "subtitulo": "Catecolaminas, Agonistas β2 Selectivos y Antagonistas β-bloqueantes",
+    "descripcion": "SAR de feniletanolaminas y ariloxipropanolaminas. Protección metabólica frente a COMT (saligenina). Agonistas β2 (salbutamol, salmeterol) y β-bloqueantes cardio-selectivos (propranolol, atenolol, bisoprolol).",
+    "archivo": "./data/farmacos-tema02.json",
+    "disponible": false,
+    "totalFarmacos": null
+  },
+  {
+    "id": "tema-03",
+    "numero": 3,
+    "codigo": "Tema 03",
+    "nombre": "Sistema Dopaminérgico",
+    "subtitulo": "Agonistas Antiparkinsonianos y Antipsicóticos Clásicos vs. Atípicos",
+    "descripcion": "Vías dopaminérgicas. Profármacos y transporte por LAT1 (levodopa, carbidopa). Agonistas directos (pramipexol). Antipsicóticos típicos (haloperidol, clorpromazina) y atípicos multidianas (clozapina, olanzapina, aripiprazol).",
+    "archivo": "./data/farmacos-tema03.json",
+    "disponible": false,
+    "totalFarmacos": null
+  },
+  {
+    "id": "tema-04",
+    "numero": 4,
+    "codigo": "Tema 04",
+    "nombre": "Sistema Serotoninérgico",
+    "subtitulo": "Triptanes Antimigrañosos y Moduladores de la Recaptación (ISRS/IRSN)",
+    "descripcion": "Química del núcleo indólico. Agonistas 5-HT1B/1D craneales (sumatriptán, zolmitriptán). Inhibidores selectivos de recaptación de serotonina (fluoxetina, paroxetina, sertralina) y modulación de receptores 5-HT2 y 5-HT3.",
+    "archivo": "./data/farmacos-tema04.json",
+    "disponible": false,
+    "totalFarmacos": null
+  },
+  {
+    "id": "tema-05",
+    "numero": 5,
+    "codigo": "Tema 05",
+    "nombre": "Sistema GABAérgico",
+    "subtitulo": "Moduladores Alostéricos Positivos: Benzodiazepinas, Hipnóticos Z y Barbitúricos",
+    "descripcion": "Receptor GABAA pentamérico. SAR de 1,4-benzodiazepinas (diazepam, lorazepam, alprazolam), hipnóticos no benzodiazepínicos (zolpidem) y antagonista selectivo para reversión (flumazenil).",
+    "archivo": "./data/farmacos-tema05.json",
+    "disponible": false,
+    "totalFarmacos": null
+  },
+  {
+    "id": "tema-06",
+    "numero": 6,
+    "codigo": "Tema 06",
+    "nombre": "Sistema Opioide & Dolor",
+    "subtitulo": "Morfina, Derivados Semisintéticos, Opioides Sintéticos y Antagonistas",
+    "descripcion": "Farmacóforo de Beckett-Casy en receptores mu-opioides. Morfinanos, fenilpiperidinas (fentanilo, meperidina) y derivados difenilheptánicos (metadona). Antagonistas puros para intoxicaciones agudas (naloxona).",
+    "archivo": "./data/farmacos-tema06.json",
+    "disponible": false,
+    "totalFarmacos": null
+  },
+  {
+    "id": "tema-07",
+    "numero": 7,
+    "codigo": "Tema 07",
+    "nombre": "Sistema Histaminérgico",
+    "subtitulo": "Antihistamínicos H1 (1ª y 2ª Generación) y Antagonistas H2 Gástricos",
+    "descripcion": "SAR del anillo imidazólico. Antialérgicos H1 sedantes vs no sedantes (cetirizina, loratadina). Antagonistas H2 con bioisosterismo de tiourea a cianoguanidina y nitroetenodiamina (cimetidina, ranitidina, famotidina).",
+    "archivo": "./data/farmacos-tema07.json",
+    "disponible": false,
+    "totalFarmacos": null
+  },
+  {
+    "id": "tema-08",
+    "numero": 8,
+    "codigo": "Tema 08",
+    "nombre": "Sistema Renina-Angiotensina",
+    "subtitulo": "Inhibidores de la ECA (IECA) y Antagonistas del Receptor AT1 (ARA-II)",
+    "descripcion": "Coordinación con el átomo de zinc en ECA (captopril, enalapril, lisinopril). Profármacos éster para absorción oral. Diseño de ARA-II con bifeniltetrazol bioisóstero de carboxilato (losartán, valsartán).",
+    "archivo": "./data/farmacos-tema08.json",
+    "disponible": false,
+    "totalFarmacos": null
+  },
+  {
+    "id": "tema-09",
+    "numero": 9,
+    "codigo": "Tema 09",
+    "nombre": "AINEs & Coxibs",
+    "subtitulo": "Inhibidores de Ciclooxigenasas (COX-1/COX-2) y Selectividad Estructural",
+    "descripcion": "Vía del ácido araquidónico. Salicilatos, derivados del ácido propiónico e inversión quiral (ibuprofeno, naproxeno). Diferencias volumétricas en el bolsillo catalítico entre COX-1 y COX-2 para diseño de Coxibs (celecoxib).",
+    "archivo": "./data/farmacos-tema09.json",
+    "disponible": false,
+    "totalFarmacos": null
+  },
+  {
+    "id": "tema-10",
+    "numero": 10,
+    "codigo": "Tema 10",
+    "nombre": "Transporte & Perfil ADMET",
+    "subtitulo": "Transportadores de Membrana, Reglas de Lipinski / Veber y Profármacos",
+    "descripcion": "Estrategias químicas para superar barreras biológicas. Reconocimiento por PEPT1 (valaciclovir), profármacos diana y optimización de parámetros fisicoquímicos para administración oral y distribución tisular.",
+    "archivo": "./data/farmacos-tema10.json",
+    "disponible": false,
+    "totalFarmacos": null
+  }
+]
