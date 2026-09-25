@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Baraja de Fármacos · QFDOS · Universidad de Granada</title>
+  <meta name="description" content="Baraja coleccionable de monografías moleculares, parámetros SAR y claves de examen de Química Farmacéutica II. Acceso abierto sin login.">
+  <meta name="theme-color" content="#1e3a8a">
+
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Baraja Coleccionable de Fármacos · QFDOS UGR">
+  <meta property="og:description" content="15 monografías moleculares con parámetros SAR comparativos (0-99), farmacóforos y dianas. Acceso abierto sin necesidad de registro.">
+  <meta property="og:image" content="./assets/Plantillas/qfdos-banner-tema01-acetilcolina.png">
+
+  <!-- Web App Manifest -->
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" href="./icons/icon-192.png">
+
+  <!-- Tipografías Oficiales del Sistema QFDOS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hojas de estilo del Sistema de Diseño 2627 QFDOS -->
+  <link rel="stylesheet" href="./tokens.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- CABECERA INSTITUCIONAL -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="brand-wrap">
+        <div class="brand-badge-ugr">
+          <img src="./assets/Institucional/facultad-farmacia-sello.png" alt="Sello Facultad de Farmacia UGR" class="brand-ugr-logo">
+        </div>
+        <div class="brand-text-col">
+          <div class="brand-title">
+            QFDOS · Baraja de Fármacos
+            <span class="brand-tag">Acceso Abierto</span>
+          </div>
+          <div class="brand-sub">Química Farmacéutica II · Grado en Farmacia · Universidad de Granada</div>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <a href="https://jjdmochon.github.io/qfdos-web-v3/" target="_blank" rel="noopener noreferrer" class="btn-header-link" title="Ir al Portal Web Principal QFDOS v3">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span>Portal QFDOS</span>
+        </a>
+        <a href="https://github.com/jjdmochon/qfdos-cartas" target="_blank" rel="noopener noreferrer" class="btn-header-link" title="Ver repositorio en GitHub">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECCIÓN HERO & SELECTOR DE TEMAS -->
+  <section class="hero-section">
+    <div class="hero-box">
+      <div class="hero-content">
+        <h1>Baraja Coleccionable de Fármacos</h1>
+        <p>
+          Recurso de estudio visual y preparación de exámenes: monografías moleculares 2D con parámetros SAR comparativos (0-99), farmacóforos, acciones, dianas y preguntas clave. Abierto a toda la comunidad estudiantil.
+        </p>
+      </div>
+
+      <div class="hero-stats-badge">
+        <div class="stat-item">
+          <span class="stat-number" id="stat-total-count">15</span>
+          <span class="stat-label">Moléculas</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">6</span>
+          <span class="stat-label">Índices SAR</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Libre</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navegación por Temas del Programa Oficial -->
+    <div class="topic-selector-wrap">
+      <div class="topic-pills-scroll" role="tablist" aria-label="Temas del curso">
+        <button type="button" class="topic-pill is-active" data-topic="tema-01" role="tab" aria-selected="true">
+          <span>Tema 01 · Colinérgicos</span>
+          <span style="font-family: var(--font-mono); font-size: 0.7rem; opacity: 0.9;">(15)</span>
+        </button>
+        <button type="button" class="topic-pill is-disabled" data-topic="tema-02" role="tab" aria-selected="false">
+          <span>Tema 02 · Adrenérgicos</span>
+          <span class="pill-badge-proximamente">Próximamente</span>
+        </button>
+        <button type="button" class="topic-pill is-disabled" data-topic="tema-03" role="tab" aria-selected="false">
+          <span>Tema 03 · Histamina</span>
+          <span class="pill-badge-proximamente">Próximamente</span>
+        </button>
+        <button type="button" class="topic-pill is-disabled" data-topic="tema-04" role="tab" aria-selected="false">
+          <span>Tema 04 · Serotonina</span>
+          <span class="pill-badge-proximamente">Próximamente</span>
+        </button>
+        <button type="button" class="topic-pill is-disabled" data-topic="tema-05" role="tab" aria-selected="false">
+          <span>Tema 05 · SNC</span>
+          <span class="pill-badge-proximamente">Próximamente</span>
+        </button>
+        <button type="button" class="topic-pill is-disabled" data-topic="tema-06" role="tab" aria-selected="false">
+          <span>Tema 06 · Cardiovasculares</span>
+          <span class="pill-badge-proximamente">Próximamente</span>
+        </button>
+        <button type="button" class="topic-pill is-disabled" data-topic="tema-07" role="tab" aria-selected="false">
+          <span>Tema 07 · Antibacterianos</span>
+          <span class="pill-badge-proximamente">Próximamente</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE CONTROLES: FILTROS + BÚSQUEDA + ACCIONES -->
+  <section class="controls-bar">
+    <div class="group-filters" id="group-filters" role="group" aria-label="Filtrar por grupo farmacológico">
+      <button type="button" class="filter-btn active" data-group="todos">
+        Todos <span class="filter-count" data-group-count="todos">15</span>
+      </button>
+      <button type="button" class="filter-btn" data-group="agonista">
+        Agonistas <span class="filter-count" data-group-count="agonista">6</span>
+      </button>
+      <button type="button" class="filter-btn" data-group="ache">
+        Anticolinesterásicos <span class="filter-count" data-group-count="ache">4</span>
+      </button>
+      <button type="button" class="filter-btn" data-group="antidoto">
+        Antídoto <span class="filter-count" data-group-count="antidoto">1</span>
+      </button>
+      <button type="button" class="filter-btn" data-group="antagonista">
+        Antagonistas <span class="filter-count" data-group-count="antagonista">4</span>
+      </button>
+    </div>
+
+    <div class="toolbar-actions">
+      <div class="search-wrap">
+        <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input 
+          type="text" 
+          id="search-input" 
+          class="search-input" 
+          placeholder="Buscar fármaco, diana o SMILES..." 
+          autocomplete="off"
+          aria-label="Buscar fármaco"
+        >
+      </div>
+
+      <button type="button" id="btn-theme-toggle" class="action-btn" title="Alternar entre diseño limpio y modo nocturno">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span>Modo Marino</span>
+      </button>
+
+      <button type="button" id="btn-flip-all" class="action-btn action-btn--primary" title="Voltear todas las cartas para ver el reverso">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        <span>Voltear Todas</span>
+      </button>
+
+      <button type="button" id="btn-print" class="action-btn" title="Imprimir cartas para recortar o guardar en PDF">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        <span>Imprimir</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- CONTENEDOR PRINCIPAL: REJILLA DE CARTAS -->
+  <main class="cards-main">
+    <div id="cards-grid" class="cards-grid" aria-live="polite">
+      <!-- Inyectado dinámicamente por app.js -->
+    </div>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-copy">
+        <strong>Química Farmacéutica II (2627 QFDOS) · Grado en Farmacia</strong>
+        <span>Departamento de Química Farmacéutica y Orgánica · Facultad de Farmacia · Universidad de Granada</span>
+        <span style="font-size: 0.74rem; margin-top: 4px; opacity: 0.85;">Docencia y coordinación: Prof. Juan José Díaz Mochón · Nexus Lab Team</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://jjdmochon.github.io/qfdos-web-v3/" target="_blank" rel="noopener noreferrer">Plataforma QFDOS v3</a>
+        <a href="https://molview.org/" target="_blank" rel="noopener noreferrer">MolView 3D</a>
+        <a href="https://github.com/jjdmochon/qfdos-cartas" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- NOTIFICACIÓN TOAST -->
+  <div id="toast-notice" class="toast-notice" role="status" aria-live="polite"></div>
+
+  <!-- SCRIPT PRINCIPAL -->
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

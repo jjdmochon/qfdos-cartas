@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 240" width="100%" height="100%" style="background:#ffffff; border-radius:10px; font-family:system-ui, -apple-system, sans-serif;">
+  <!-- Título Superior -->
+  <text x="270" y="24" text-anchor="middle" font-size="13" font-weight="800" fill="#1e3a8a" letter-spacing="0.5">
+    REGLA DE LOS CINCO ÁTOMOS DE ING · ACETILCOLINA
+  </text>
+  <text x="270" y="42" text-anchor="middle" font-size="10.5" font-weight="600" fill="#64748b">
+    Cadena principal de exactamente 5 átomos unida al catión amonio cuaternario
+  </text>
+
+  <!-- Enlaces de los metilos al Nitrógeno (desplazados a Y base ~135) -->
+  <line x1="45" y1="100" x2="85" y2="125" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="35" y="98" font-size="11" font-weight="700" fill="#475569" text-anchor="end">H₃C</text>
+
+  <line x1="35" y1="135" x2="80" y2="135" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="30" y="139" font-size="11" font-weight="700" fill="#475569" text-anchor="end">H₃C</text>
+
+  <line x1="45" y1="170" x2="85" y2="145" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="35" y="180" font-size="11" font-weight="700" fill="#475569" text-anchor="end">H₃C</text>
+
+  <!-- Cabeza Catiónica N+ -->
+  <circle cx="95" cy="135" r="18" fill="#2563eb" stroke="#1d4ed8" stroke-width="2"/>
+  <text x="95" y="141" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle">N⁺</text>
+  <text x="95" y="167" font-size="9.5" font-weight="700" fill="#2563eb" text-anchor="middle">Amonio 4º</text>
+
+  <!-- Enlace N+ a C-alfa (Átomo 1) -->
+  <line x1="113" y1="135" x2="162" y2="135" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Átomo 1: C-alfa -->
+  <line x1="175" y1="135" x2="230" y2="105" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="170" cy="135" r="14" fill="#1e3a8a" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="170" y="140" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="170" y="162" font-size="10" font-weight="800" fill="#1e3a8a" text-anchor="middle">Cα</text>
+  <text x="170" y="173" font-size="8.5" font-weight="600" fill="#64748b" text-anchor="middle">(-CH₂-)</text>
+
+  <!-- Átomo 2: C-beta -->
+  <line x1="243" y1="105" x2="298" y2="135" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="238" cy="105" r="14" fill="#1e3a8a" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="238" y="110" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="238" y="83" font-size="10" font-weight="800" fill="#1e3a8a" text-anchor="middle">Cβ</text>
+  <text x="238" y="72" font-size="8.5" font-weight="600" fill="#64748b" text-anchor="middle">(-CH₂-)</text>
+
+  <!-- Átomo 3: Oxígeno del éster -->
+  <line x1="312" y1="135" x2="368" y2="105" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="306" cy="135" r="14" fill="#dc2626" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="306" y="140" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="306" y="162" font-size="10" font-weight="800" fill="#dc2626" text-anchor="middle">O</text>
+  <text x="306" y="173" font-size="8.5" font-weight="600" fill="#64748b" text-anchor="middle">(éster)</text>
+
+  <!-- Átomo 4: Carbono carbonílico -->
+  <line x1="382" y1="105" x2="438" y2="135" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+  <!-- Doble enlace carbonilo =O hacia arriba -->
+  <line x1="371" y1="93" x2="371" y2="69" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="377" y1="93" x2="377" y2="69" stroke="#dc2626" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="374" cy="63" r="9" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="374" y="67" font-size="10" font-weight="800" fill="#dc2626" text-anchor="middle">O</text>
+
+  <circle cx="376" cy="105" r="14" fill="#1e3a8a" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="376" y="110" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="376" y="129" font-size="10" font-weight="800" fill="#1e3a8a" text-anchor="middle">C</text>
+  <text x="376" y="140" font-size="8.5" font-weight="600" fill="#64748b" text-anchor="middle">(carbonilo)</text>
+
+  <!-- Átomo 5: Carbono del metilo terminal -->
+  <circle cx="445" cy="135" r="14" fill="#0d9488" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="445" y="140" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="445" y="162" font-size="10" font-weight="800" fill="#0d9488" text-anchor="middle">-CH₃</text>
+  <text x="445" y="173" font-size="8.5" font-weight="600" fill="#64748b" text-anchor="middle">(metilo)</text>
+
+  <!-- Llave / Corchete inferior que agrupa del Átomo 1 al Átomo 5 -->
+  <path d="M 155 190 L 155 198 L 305 198 L 305 205 L 305 198 L 458 198 L 458 190" fill="none" stroke="#1e3a8a" stroke-width="1.8"/>
+  <text x="306" y="222" font-size="10.5" font-weight="800" fill="#1e3a8a" text-anchor="middle">
+    CADENA DE 5 ÁTOMOS (LONGITUD MÁXIMA DE ING)
+  </text>
+</svg>

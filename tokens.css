@@ -1,0 +1,56 @@
+/* QFDOS Structural Affinity Identity (v3.0) — Master Design Tokens */
+:root, [data-theme="light"] {
+  --primary: #1e3a8a; /* Azul marino. Ancla de la identidad: titulares, borde superior de tarjeta (4px), fondo de botón primario, iconografía. Cumple 10.4:1 sobre surface y neutral-bg. */
+  --primary-light: #3b82f6; /* Estados de foco, enlaces sobre fondo oscuro y gráficos. No usar como texto pequeño sobre surface (2.9:1): solo áreas >=24px, bordes e iconos. */
+  --primary-dark: #172554; /* Fondo de los bloques técnicos y hover del botón primario. Texto text-on-dark (14.7:1) y tertiary (7.9:1) sobre él. */
+  --primary-bg: rgba(30, 58, 138, 0.05); /* Velo de marca al 5%: relleno del contenedor de icono en las tarjetas y bandas de sección. Nunca para texto. */
+  --secondary: #0d9488; /* Teal de continuidad con QFUNO. Reglas separadoras, bordes, iconos y relleno de barras de progreso. Como texto solo a >=24px o negrita >=19px (3.7:1 sobre surface): para texto pequeño usar secondary-dark. */
+  --secondary-light: #14b8a6; /* Extremo oscuro del degradado de progreso y estados hover de elementos teal. */
+  --secondary-dark: #0f766e; /* Teal legible para texto pequeño: badges métricos y etiquetas sobre surface o neutral-bg (5.5:1). */
+  --tertiary: #2dd4bf; /* Menta de realce. Borde izquierdo y rótulos de los bloques técnicos sobre primary-dark (7.9:1). No usar sobre fondos claros. */
+  --tertiary-light: #5eead4; /* Menta clara para rellenos decorativos y arranque del degradado mint-glow. Nunca como texto. */
+  --neutral-bg: #f8fafc; /* Fondo de página y de diapositiva alternativo. Grounds de text-main (21:1) y text-muted (4.5:1). */
+  --surface: #ffffff; /* Superficie de tarjetas, tablas y diapositivas. Ground principal de text-main y primary. */
+  --text-main: #000000; /* Negro puro para todo el cuerpo de texto en web y proyección sobre surface y neutral-bg (21:1). */
+  --text-muted: #64748b; /* Metadatos, pies de figura y texto auxiliar sobre surface (4.8:1) y neutral-bg (4.5:1). Nunca para texto primario ni en diapositivas. */
+  --text-on-dark: #ffffff; /* Texto y código sobre primary, primary-dark y botónes primarios. */
+  --charcoal: #334155; /* Texto secundario denso y bordes de tabla en documentos impresos; alternativa a text-main cuando el negro puro resulta duro en papel. */
+  --line: #e2e8f0; /* Borde fino (1px) de tarjeta técnica y de bloque de contenido sobre surface o neutral-bg: separador visual sin el peso de primary al 10%. */
+  --accent-blue: #3b82f6; /* Acento de categoría en diagramas y leyendas (serie 1). */
+  --accent-emerald: #10b981; /* Acento de categoría y estado correcto en autoevaluación; acompañar siempre de icono o palabra, no solo color. */
+  --accent-amber: #f59e0b; /* Acento de categoría y aviso en rúbricas; sobre surface solo como relleno o borde, el texto encima va en text-main. */
+  --accent-purple: #8b5cf6; /* Acento de categoría en diagramas de rutas metabólicas (serie 4) y cuarto color del ciclo de acento de tarjeta docente (primary → secondary → accent-orange → accent-purple). */
+  --accent-orange: #f97316; /* Acento de categoría, marcado de errores frecuentes y tercer color del ciclo de acento de tarjeta docente. */
+  --shadow-sm: 0 2px 4px -1px rgba(30, 58, 138, 0.05); /* Elevación de reposo de badges y bloques técnicos. */
+  --shadow-md: 0 8px 12px -3px rgba(30, 58, 138, 0.08); /* Elevación por defecto de la tarjeta de hub. */
+  --shadow-hover: 0 15px 20px -5px rgba(30, 58, 138, 0.12), 0 8px 8px -5px rgba(30, 58, 138, 0.06); /* Elevación en hover, combinada con translateY(-4px). */
+}
+:root {
+  --space-xs: 4px; /* Separación interna de badges y iconos. */
+  --space-sm: 8px; /* Hueco entre elementos contiguos de una misma linea. */
+  --space-md: 16px; /* Padding lateral en móvil y hueco de rejilla en tablet. */
+  --space-lg: 24px; /* Padding de tarjeta y hueco de rejilla en escritorio. */
+  --space-xl: 32px; /* Separación entre bloques de contenido. */
+  --space-2xl: 48px; /* Margen vertical de sección. */
+  --space-3xl: 64px; /* Margen superior de hub y separación entre unidades docentes. */
+  --radius-sm: 4px; /* Badges métricos y etiquetas. */
+  --radius-md: 8px; /* Botónes, bloques técnicos y contenedores de icono. */
+  --radius-lg: 12px; /* Tarjetas de hub y paneles. */
+  --radius-xl: 16px; /* Contenedores mayores y modales. */
+  --bp-sm: 640px; /* Movil grande. */
+  --bp-md: 768px; /* Umbral de la rejilla de 2 columnas. */
+  --bp-lg: 1024px; /* Umbral de la rejilla de 3 columnas. */
+  --bp-xl: 1280px; /* Escritorio amplio; el contenedor se detiene en 1200px. */
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'Roboto Mono', 'Fira Code', 'Courier New', monospace;
+  --text-display: 800 36px/40px var(--font-sans); /* Título de hub y de página, en primary. */
+  --text-heading: 700 26px/28px var(--font-sans); /* Título de tarjeta y de sección, en primary. */
+  --text-body: 400 20px/24px var(--font-sans); /* Cuerpo de lectura en web, en text-main. */
+  --text-body-sm: 400 18px/22px var(--font-sans); /* Descripción de tarjeta y texto auxiliar. */
+  --text-label: 700 14px/16px var(--font-sans); /* Etiquetas de botón y rótulos en mayúsculas. */
+  --text-code: 400 18px/20px var(--font-sans); /* Bloques de datos químicos: SMILES, pKa, Ki, LogP, constantes. */
+  --text-metric: 600 16px/16px var(--font-sans); /* Badges métricos dentro de tarjetas, en secondary-dark. */
+  --text-slide-title: 800 40px/44px var(--font-sans); /* Título de diapositiva 16:9 en primary, con regla fina secondary debajo. */
+  --text-slide-body: 400 28px/38px var(--font-sans); /* Cuerpo de diapositiva en text-main para máxima legibilidad en proyección. */
+  --text-slide-mono: 400 21px/28px var(--font-sans); /* Datos técnicos en diapositiva dentro de bloque primary-dark. */
+}

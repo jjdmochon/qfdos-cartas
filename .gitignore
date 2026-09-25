@@ -1,0 +1,15 @@
+# Windows / Google Drive
+desktop.ini
+Thumbs.db
+$RECYCLE.BIN/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.bak
+
+# Temporary / Scratch
+scratch/
+*.tmp
