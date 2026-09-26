@@ -22,7 +22,7 @@ Diseñado siguiendo el sistema de identidad visual **2627 QFDOS Structural Affin
    - `DUR`: Duración de la acción farmacológica.
 3. **Reverso técnico:**
    - Código SMILES con botón de copiado en un clic.
-   - Mecanismo de acción farmacológica y diana diana.
+   - Mecanismo de acción farmacológica y diana.
    - Indicaciones clínicas autorizadas.
    - Claves de diseño estructural y relaciones estructura-actividad (SAR).
    - Tip de examen QFDOS para autoevaluación.
