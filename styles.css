@@ -97,9 +97,11 @@ body.theme-dark .site-header {
 
 .brand-ugr-logo {
   height: 38px;
-  width: auto;
-  object-fit: contain;
+  width: 38px;
+  border-radius: 8px;
+  object-fit: cover;
   display: block;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .brand-text-col {
