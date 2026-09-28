@@ -90,18 +90,25 @@ body.theme-dark .site-header {
 }
 
 .brand-badge-ugr {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid var(--app-border);
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.12);
+  overflow: hidden;
+  flex-shrink: 0;
+  padding: 4px;
 }
 
 .brand-ugr-logo {
-  height: 38px;
-  width: 38px;
-  border-radius: 8px;
-  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   display: block;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .brand-text-col {
@@ -117,6 +124,7 @@ body.theme-dark .site-header {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 body.theme-dark .brand-title {
@@ -134,6 +142,19 @@ body.theme-dark .brand-title {
   padding: 2px 7px;
   border-radius: 4px;
   border: 1px solid rgba(13, 148, 136, 0.25);
+}
+
+.brand-tag--mint {
+  color: var(--app-teal-dark);
+  background: rgba(45, 212, 191, 0.2);
+  border-color: rgba(13, 148, 136, 0.4);
+  font-weight: 800;
+}
+
+body.theme-dark .brand-tag--mint {
+  color: #0b132b;
+  background: var(--app-mint);
+  border-color: var(--app-mint);
 }
 
 body.theme-dark .brand-tag {
@@ -173,6 +194,25 @@ body.theme-dark .brand-tag {
   color: var(--app-primary);
   border-color: var(--app-primary);
   background: rgba(30, 58, 138, 0.04);
+}
+
+.btn-header-link--primary {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.08) 0%, rgba(13, 148, 136, 0.14) 100%);
+  border: 1px solid rgba(45, 212, 191, 0.5);
+  color: var(--app-primary);
+  font-weight: 700;
+}
+
+.btn-header-link--primary:hover {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, rgba(13, 148, 136, 0.24) 100%);
+  border-color: var(--app-teal);
+  color: var(--app-teal-dark);
+}
+
+body.theme-dark .btn-header-link--primary {
+  background: rgba(45, 212, 191, 0.15);
+  border-color: rgba(45, 212, 191, 0.4);
+  color: var(--app-mint);
 }
 
 /* ==========================================================================
@@ -617,27 +657,97 @@ body.theme-dark .action-btn--primary {
   border-color: rgba(13, 148, 136, 0.45);
 }
 
+/* Prevenir que los clics en la cara inactiva se capturen */
+.carta-item:not(.is-flipped) .cara--dorso {
+  pointer-events: none !important;
+}
+.carta-item.is-flipped .cara--frente {
+  pointer-events: none !important;
+}
+
 /* Acentos de Grupo */
 .carta-item[data-grupo="agonista"] .cara { border-top-color: #0d9488; }
 .carta-item[data-grupo="ache"] .cara { border-top-color: #2563eb; }
 .carta-item[data-grupo="antidoto"] .cara { border-top-color: #d97706; }
 .carta-item[data-grupo="antagonista"] .cara { border-top-color: #7c3aed; }
 
-/* Dorso */
+/* Dorso: Estructura fija y contenido interior scrolleable */
 .cara--dorso {
   transform: rotateY(180deg);
-  overflow-y: auto;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(13, 148, 136, 0.35) transparent;
-  padding-bottom: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 14px 14px 12px;
   background: var(--app-surface);
   color: var(--app-text);
 }
 
-.cara--dorso::-webkit-scrollbar {
+.dorso-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  padding-bottom: 4px;
+  flex-shrink: 0;
+}
+
+.dorso-header-right,
+.card-header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+/* Sello oficial de marca QFDOS */
+.card-brand-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 3.5px;
+  padding: 1.5px 5.5px;
+  border-radius: 4px;
+  background: rgba(30, 58, 138, 0.05);
+  border: 1px solid rgba(30, 58, 138, 0.15);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--app-primary);
+  user-select: none;
+}
+
+.card-brand-stamp img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+body.theme-dark .card-brand-stamp {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #67e8f9;
+}
+
+.dorso-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(13, 148, 136, 0.35) transparent;
+  position: relative;
+  z-index: 1;
+  padding-right: 4px;
+  cursor: default;
+}
+
+.dorso-scroll::-webkit-scrollbar {
   width: 4px;
 }
-.cara--dorso::-webkit-scrollbar-thumb {
+.dorso-scroll::-webkit-scrollbar-thumb {
   background: rgba(13, 148, 136, 0.3);
   border-radius: 4px;
 }
@@ -1058,6 +1168,44 @@ body.theme-dark .dorso-actions {
   text-decoration: none;
 }
 
+.btn-card-action--flip {
+  width: 100%;
+  padding: 7px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.08) 0%, rgba(13, 148, 136, 0.12) 100%);
+  border: 1px solid rgba(13, 148, 136, 0.35);
+  color: var(--app-primary);
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 180ms ease;
+  user-select: none;
+}
+
+.btn-card-action--flip:hover {
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.15) 0%, rgba(13, 148, 136, 0.22) 100%);
+  border-color: var(--app-teal);
+  color: var(--app-teal-dark);
+  transform: translateY(-1px);
+}
+
+body.theme-dark .btn-card-action--flip {
+  background: rgba(45, 212, 191, 0.12);
+  border-color: rgba(45, 212, 191, 0.35);
+  color: var(--app-mint);
+}
+
+body.theme-dark .btn-card-action--flip:hover {
+  background: rgba(45, 212, 191, 0.22);
+  border-color: var(--app-mint);
+  color: #ffffff;
+}
+
 .btn-card-action--secondary {
   background: #f1f5f9;
   color: #1e293b;
@@ -1235,20 +1383,74 @@ body.theme-dark .footer-links a {
   }
 }
 
+@media (max-width: 1100px) {
+  .controls-bar {
+    gap: 12px;
+  }
+  .search-wrap {
+    min-width: 180px;
+    flex: 1 1 180px;
+  }
+}
+
 @media (max-width: 768px) {
   .header-container {
     flex-direction: column;
     align-items: flex-start;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  .brand-title {
+    font-size: 0.98rem;
+    gap: 6px;
+  }
+  .header-actions {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .btn-header-link {
+    font-size: 0.74rem;
+    padding: 6px 10px;
+  }
+  .hero-section {
+    padding: 20px 16px 12px;
+  }
+  .hero-box {
+    padding: 16px 18px;
   }
   .controls-bar {
     flex-direction: column;
     align-items: stretch;
+    padding: 10px 16px 16px;
+    gap: 12px;
+  }
+  .group-filters {
+    overflow-x: auto;
+    padding-bottom: 4px;
+    flex-wrap: nowrap;
+    scrollbar-width: thin;
   }
   .search-wrap {
     min-width: 100%;
+    max-width: 100%;
+    flex: 1 1 100%;
   }
   .toolbar-actions {
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+  .action-btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+  .cards-main {
+    padding: 0 16px 40px;
   }
   .cards-grid {
     grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));

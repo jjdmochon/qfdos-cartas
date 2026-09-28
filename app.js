@@ -316,22 +316,18 @@ class CartasApp {
     // Delegación de eventos en las cartas
     if (this.gridEl) {
       this.gridEl.addEventListener('click', (e) => {
-        if (e.target.closest('.btn-card-action') || e.target.closest('.smiles-copy-btn')) {
+        if (
+          e.target.closest('.btn-card-action') || 
+          e.target.closest('.smiles-copy-btn') ||
+          e.target.closest('.dorso-scroll')
+        ) {
           return;
         }
 
         const carta = e.target.closest('.carta-item');
         if (carta) {
           const id = carta.dataset.id;
-          if (this.flippedCards.has(id)) {
-            this.flippedCards.delete(id);
-            carta.classList.remove('is-flipped');
-            carta.setAttribute('aria-pressed', 'false');
-          } else {
-            this.flippedCards.add(id);
-            carta.classList.add('is-flipped');
-            carta.setAttribute('aria-pressed', 'true');
-          }
+          this.toggleCardFlip(id, e);
         }
       });
 
@@ -339,12 +335,33 @@ class CartasApp {
       this.gridEl.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
           const carta = e.target.closest('.carta-item');
-          if (carta && !e.target.closest('button, a')) {
+          if (carta && !e.target.closest('button, a, input')) {
             e.preventDefault();
-            carta.click();
+            const id = carta.dataset.id;
+            this.toggleCardFlip(id, e);
           }
         }
       });
+    }
+  }
+
+  toggleCardFlip(id, e) {
+    if (e) {
+      e.stopPropagation();
+    }
+    const cardEl = this.gridEl?.querySelector(`.carta-item[data-id="${id}"]`);
+    if (this.flippedCards.has(id)) {
+      this.flippedCards.delete(id);
+      if (cardEl) {
+        cardEl.classList.remove('is-flipped');
+        cardEl.setAttribute('aria-pressed', 'false');
+      }
+    } else {
+      this.flippedCards.add(id);
+      if (cardEl) {
+        cardEl.classList.add('is-flipped');
+        cardEl.setAttribute('aria-pressed', 'true');
+      }
     }
   }
 
@@ -468,7 +485,13 @@ class CartasApp {
                 <div class="card-rel">${f.relevancia ?? 90}</div>
                 <div class="card-rol">${esc(f.rol)}</div>
               </div>
-              <span class="card-badge">${esc(f.badge)}</span>
+              <div class="card-header-right">
+                <span class="card-badge">${esc(f.badge)}</span>
+                <div class="card-brand-stamp" title="Química Farmacéutica II (Grupo E)">
+                  <img src="./assets/Marca/qfdos-isotipo.png" alt="QFDOS" onerror="if(!this.src.includes('i.ibb.co'))this.src='https://i.ibb.co/HLCYDc3c/Logo-primario-QFDOS.png'">
+                  <span>QFDOS</span>
+                </div>
+              </div>
             </div>
 
             <div class="card-structure">
@@ -485,51 +508,74 @@ class CartasApp {
 
             <div class="card-foot">
               <span>${esc(f.formula)} · ${Number(f.masa).toFixed(2)} Da</span>
-              <span class="flip-hint">↺ Voltear</span>
+              <span class="flip-hint">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                Girar
+              </span>
             </div>
           </div>
 
           <!-- DORSO -->
           <div class="cara cara--dorso">
-            <div class="card-name">${esc(f.nombre)}</div>
+            <svg class="trama-mesh" viewBox="0 0 240 340" aria-hidden="true">
+              <rect width="240" height="340" fill="url(#qf-hex-${esc(f.id)})" />
+            </svg>
 
-            <div class="smiles-box" title="Fórmula SMILES">
-              <span class="smiles-text">${esc(f.smiles)}</span>
+            <!-- Cabecera Dorso con botón voltear -->
+            <div class="dorso-header" onclick="window.app.toggleCardFlip('${esc(f.id)}', event)" title="Pulsar para voltear al anverso">
+              <div class="card-name">${esc(f.nombre)}</div>
+              <div class="dorso-header-right">
+                <span class="card-badge" style="font-size: 9px; padding: 2px 6px;">${esc(f.badge)}</span>
+                <div class="card-brand-stamp" title="Química Farmacéutica II (Grupo E)">
+                  <img src="./assets/Marca/qfdos-isotipo.png" alt="QFDOS" onerror="if(!this.src.includes('i.ibb.co'))this.src='https://i.ibb.co/HLCYDc3c/Logo-primario-QFDOS.png'">
+                  <span>QFDOS</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contenido scrollable del dorso -->
+            <div class="dorso-scroll" onclick="event.stopPropagation()">
+              <div class="smiles-box" title="Fórmula SMILES">
+                <span class="smiles-text">${esc(f.smiles)}</span>
+                <button 
+                  type="button" 
+                  class="smiles-copy-btn" 
+                  onclick="window.app.copySmiles('${esc(f.smiles)}', event)" 
+                  title="Copiar código SMILES"
+                >
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+
+              <h3>Acción Farmacológica</h3>
+              <p>${esc(f.accion)}</p>
+
+              <h3>Indicación Clínica</h3>
+              <p>${esc(f.indicacion)}</p>
+
+              <h3>Clave de Diseño SAR</h3>
+              <p>${esc(f.diseno)}</p>
+
+              <div class="exam-tip">
+                <strong>
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 3px;"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                  Tip Examen QFDOS
+                </strong>
+                ${esc(f.examen)}
+              </div>
+            </div>
+
+            <!-- Botón Voltear en Dorso (anula botones rotos 3D y ADMET) -->
+            <div class="dorso-actions" onclick="event.stopPropagation()">
               <button 
                 type="button" 
-                class="smiles-copy-btn" 
-                onclick="window.app.copySmiles('${esc(f.smiles)}', event)" 
-                title="Copiar código SMILES"
+                class="btn-card-action btn-card-action--flip"
+                onclick="window.app.toggleCardFlip('${esc(f.id)}', event)"
+                title="Voltear carta al anverso"
               >
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                Voltear al anverso
               </button>
-            </div>
-
-            <h3>Acción Farmacológica</h3>
-            <p>${esc(f.accion)}</p>
-
-            <h3>Indicación Clínica</h3>
-            <p>${esc(f.indicacion)}</p>
-
-            <h3>Clave de Diseño SAR</h3>
-            <p>${esc(f.diseno)}</p>
-
-            <div class="exam-tip">
-              <strong>Tip Examen QFDOS</strong>
-              ${esc(f.examen)}
-            </div>
-
-            <div class="dorso-actions">
-              <a 
-                href="https://molview.org/?smiles=${encodeURIComponent(f.smiles)}" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="btn-card-action btn-card-action--secondary"
-                title="Abrir visualizador 3D en MolView"
-              >
-                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                MolView 3D
-              </a>
             </div>
           </div>
         </div>
