@@ -42,7 +42,8 @@ qfdos-cartas/
 ├── tokens.css                   # Variables de diseño (colores, fuentes, radios)
 ├── data/
 │   ├── temas.json               # Manifiesto central con los 10 temas del programa
-│   └── farmacos-tema01.json     # Monografías del Tema 01 (Colinérgicos)
+│   ├── farmacos-tema01.json     # Monografías del Tema 01 (Colinérgicos)
+│   └── farmacos-tema05.json     # Monografías del Tema 05 (GABAérgico, 35 fármacos)
 └── estructuras/                 # Archivos vectoriales SVG de cada molécula
 ```
 

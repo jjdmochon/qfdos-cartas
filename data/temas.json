@@ -48,11 +48,11 @@
     "numero": 5,
     "codigo": "Tema 05",
     "nombre": "Sistema GABAérgico",
-    "subtitulo": "Moduladores Alostéricos Positivos: Benzodiazepinas, Hipnóticos Z y Barbitúricos",
-    "descripcion": "Receptor GABAA pentamérico. SAR de 1,4-benzodiazepinas (diazepam, lorazepam, alprazolam), hipnóticos no benzodiazepínicos (zolpidem) y antagonista selectivo para reversión (flumazenil).",
+    "subtitulo": "GABA y Glicina: Benzodiazepinas, Neuroesteroides, Fármacos Z y Barbitúricos",
+    "descripcion": "En esta baraja tenemos los 35 fármacos del tema, empezando por el GABA y su metabolismo, con la GAD y la GABA-AT dependientes del PLP, que es donde actúa la vigabatrina; el valproato la acompaña como antiepiléptico multidiana. Respecto al receptor GABA-A, recorremos la SAR y la síntesis de las 1,4-benzodiazepinas, los anillos fusionados y el flumazenilo, y terminamos con los neuroesteroides, los fármacos Z y los barbitúricos.",
     "archivo": "./data/farmacos-tema05.json",
-    "disponible": false,
-    "totalFarmacos": null
+    "disponible": true,
+    "totalFarmacos": 35
   },
   {
     "id": "tema-06",

@@ -177,6 +177,8 @@ class CartasApp {
 
       // Actualizar contadores y cabecera del Hero
       if (this.countTotalEl) this.countTotalEl.textContent = this.farmacos.length;
+      const brandCount = document.getElementById('brand-count-tag');
+      if (brandCount) brandCount.textContent = `Colección Oficial · ${this.farmacos.length} Cartas`;
       if (this.statTopicLabelEl && this.activeTopic) {
         this.statTopicLabelEl.textContent = this.activeTopic.codigo;
       }
