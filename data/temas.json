@@ -4,11 +4,11 @@
     "numero": 1,
     "codigo": "Tema 01",
     "nombre": "Transmisión Colinérgica",
-    "subtitulo": "Acetilcolina, Agonistas Muscarínicos/Nicotínicos, Inhibidores de AChE y Antagonistas",
+    "subtitulo": "Agonistas, Inhibidores de Acetilcolinesterasa (AChE) y Reactivadores Oxímicos",
     "descripcion": "Química de la sinapsis colinérgica: regla de Ing de los 5 átomos, agonistas directos, anticolinesterásicos reversibles y pseudo-irreversibles, reactivadores con oximas (pralidoxima) y bloqueantes muscarínicos y de la placa motora.",
     "archivo": "./data/farmacos-tema01.json",
     "disponible": true,
-    "totalFarmacos": 15
+    "totalFarmacos": 20
   },
   {
     "id": "tema-02",
@@ -18,30 +18,30 @@
     "subtitulo": "Catecolaminas, Agonistas β2 Selectivos y Antagonistas β-bloqueantes",
     "descripcion": "SAR de feniletanolaminas y ariloxipropanolaminas. Protección metabólica frente a COMT (saligenina). Agonistas β2 (salbutamol, salmeterol) y β-bloqueantes cardio-selectivos (propranolol, atenolol, bisoprolol).",
     "archivo": "./data/farmacos-tema02.json",
-    "disponible": false,
-    "totalFarmacos": null
+    "disponible": true,
+    "totalFarmacos": 25
   },
   {
     "id": "tema-03",
     "numero": 3,
     "codigo": "Tema 03",
     "nombre": "Sistema Dopaminérgico",
-    "subtitulo": "Agonistas Antiparkinsonianos y Antipsicóticos Clásicos vs. Atípicos",
+    "subtitulo": "Agonistas Antiparkinsonianos y Antipsicóticos Clásicos vs. Atípicos (D2/5-HT2A)",
     "descripcion": "Vías dopaminérgicas. Profármacos y transporte por LAT1 (levodopa, carbidopa). Agonistas directos (pramipexol). Antipsicóticos típicos (haloperidol, clorpromazina) y atípicos multidianas (clozapina, olanzapina, aripiprazol).",
     "archivo": "./data/farmacos-tema03.json",
-    "disponible": false,
-    "totalFarmacos": null
+    "disponible": true,
+    "totalFarmacos": 27
   },
   {
     "id": "tema-04",
     "numero": 4,
     "codigo": "Tema 04",
     "nombre": "Sistema Serotoninérgico",
-    "subtitulo": "Triptanes Antimigrañosos y Moduladores de la Recaptación (ISRS/IRSN)",
+    "subtitulo": "Agonistas 5-HT1B/1D (Triptanes), Inhibidores de Recaptación (ISRS) y Antagonistas 5-HT3 (Setrones)",
     "descripcion": "Química del núcleo indólico. Agonistas 5-HT1B/1D craneales (sumatriptán, zolmitriptán). Inhibidores selectivos de recaptación de serotonina (fluoxetina, paroxetina, sertralina) y modulación de receptores 5-HT2 y 5-HT3.",
     "archivo": "./data/farmacos-tema04.json",
-    "disponible": false,
-    "totalFarmacos": null
+    "disponible": true,
+    "totalFarmacos": 33
   },
   {
     "id": "tema-05",

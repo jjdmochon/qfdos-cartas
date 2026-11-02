@@ -4,12 +4,34 @@
   "asignatura": "Química Farmacéutica II (QFDOS)",
   "curso": "2026/2027",
   "grupo": "E",
-  "nota": "Los índices 0-99 son una escala docente comparativa, no valores experimentales. Fórmulas, masas, acciones e indicaciones son datos reales. Estructuras generadas con RDKit desde los SMILES; la carta de organofosforados usa el paratión como representante de la clase.",
+  "nota": "Los índices de 0 a 99 son una escala docente para comparar fármacos entre sí, no valores experimentales. Fórmulas, masas, acciones, indicaciones y estado regulatorio son datos reales (estado a 14-oct-2026; referencia España/UE, con EE. UU. cuando difiere; fuente: estado_regulatorio_farmacos_tema1.md). Estructuras generadas con RDKit desde los SMILES; la carta de organofosforados usa el paratión como representante de la clase, y las de vareniclina, fisostigmina, tacrina, ecotiopato y tubocurarina, el SMILES de ChEMBL.",
   "grupos": {
     "agonista": "Agonistas",
     "ache": "Anticolinesterásicos",
     "antidoto": "Antídoto",
     "antagonista": "Antagonistas"
+  },
+  "estados": {
+    "uso": {
+      "etiqueta": "En uso",
+      "color": "#2dd4bf"
+    },
+    "reintroducido": {
+      "etiqueta": "Retirado y reintroducido",
+      "color": "#fb923c"
+    },
+    "descatalogado": {
+      "etiqueta": "Descatalogado",
+      "color": "#94a3b8"
+    },
+    "retirado": {
+      "etiqueta": "Retirado por seguridad",
+      "color": "#f87171"
+    },
+    "nunca": {
+      "etiqueta": "Nunca comercializado",
+      "color": "#c4b5fd"
+    }
   },
   "indices": {
     "AFI": "Afinidad y potencia sobre su diana, sea receptor o enzima",
@@ -41,6 +63,9 @@
         "SNC": 10,
         "DUR": 5
       },
+      "estado": "uso",
+      "estadoCorto": "Solo intraocular",
+      "regulatorio": "Miochol-E, solución intraocular al 1 % para la miosis en la cirugía de cataratas. No existe presentación sistémica, porque las colinesterasas la hidrolizan en segundos.",
       "accion": "Agonista completo de todos los receptores colinérgicos, muscarínicos M1-M5 y nicotínicos. Produce miosis, bradicardia, vasodilatación, más secreciones y motilidad digestiva, y contracción del músculo esquelético.",
       "indicacion": "Miosis rápida durante la cirugía del segmento anterior del ojo, en solución intraocular al 1 %. Sin indicación por vía sistémica.",
       "diseno": "El farmacóforo son el amonio cuaternario y el carbonilo del éster. La acetilcolinesterasa la hidroliza en milisegundos, así que fuera del ojo no le queda vida media útil.",
@@ -66,6 +91,9 @@
         "SNC": 8,
         "DUR": 25
       },
+      "estado": "uso",
+      "estadoCorto": "Solo diagnóstico",
+      "regulatorio": "Se comercializa únicamente para la prueba de provocación bronquial (Provocholine y equivalentes), sin indicación terapéutica.",
       "accion": "Agonista muscarínico casi puro, con actividad nicotínica residual. Provoca broncoconstricción proporcional a la dosis en vías aéreas hiperreactivas.",
       "indicacion": "Uso diagnóstico, no terapéutico: prueba de provocación bronquial para confirmar hiperreactividad de la vía aérea.",
       "diseno": "Un metilo en posición β frena la hidrólisis y suprime casi toda la actividad nicotínica. Es la primera lección de relación estructura-actividad del tema.",
@@ -91,6 +119,9 @@
         "SNC": 8,
         "DUR": 70
       },
+      "estado": "uso",
+      "estadoCorto": "Intraocular · Miostat",
+      "regulatorio": "Miostat, por vía intraocular en la cirugía del segmento anterior. Los colirios de carbacol para el glaucoma han desaparecido de la mayoría de mercados.",
       "accion": "Agonista completo muscarínico y nicotínico, resistente a la acetilcolinesterasa. Contrae el esfínter del iris y el músculo ciliar, lo que abre la malla trabecular y facilita el drenaje del humor acuoso.",
       "indicacion": "Miosis durante la cirugía intraocular y glaucoma de ángulo abierto, por vía tópica ocular.",
       "diseno": "Cambiar el éster por un carbamato deja una enzima carbamoilada que se regenera lentísimo. Conserva la acción nicotínica ganglionar, de ahí sus efectos adversos.",
@@ -116,6 +147,9 @@
         "SNC": 5,
         "DUR": 72
       },
+      "estado": "uso",
+      "estadoCorto": "Myo Hermes · Urecholine",
+      "regulatorio": "En uso por vía oral: Myo Hermes en España y Urecholine en EE. UU.",
       "accion": "Agonista muscarínico selectivo, sin acción nicotínica relevante y resistente a la acetilcolinesterasa. Estimula la contracción del detrusor y del músculo liso gastrointestinal.",
       "indicacion": "Retención urinaria no obstructiva y atonía vesical posoperatoria o posparto. También en atonía gástrica, aquí con menos respaldo.",
       "diseno": "Las dos modificaciones a la vez: β-metilo para la selectividad muscarínica y carbamato para la resistencia enzimática. Optimización por etapas en estado puro.",
@@ -141,6 +175,9 @@
         "SNC": 45,
         "DUR": 55
       },
+      "estado": "uso",
+      "estadoCorto": "Colirio · Salagen · Vuity",
+      "regulatorio": "Colirio en el glaucoma y comprimidos (Salagen) en la xerostomía. En 2021 la FDA autorizó además un colirio al 1,25 % para la presbicia (Vuity).",
       "accion": "Agonista muscarínico parcial con preferencia por M3. Contrae el esfínter pupilar y el músculo ciliar, y estimula la secreción de glándulas salivales, lagrimales y sudoríparas.",
       "indicacion": "Glaucoma de ángulo abierto y crisis de cierre angular, por vía tópica. Xerostomía del síndrome de Sjögren y la posterior a radioterapia de cabeza y cuello, por vía oral.",
       "diseno": "No es un éster de colina: es una lactona con imidazol. Al ser amina terciaria atraviesa córnea y mucosas, algo que ningún cuaternario consigue.",
@@ -166,6 +203,9 @@
         "SNC": 5,
         "DUR": 60
       },
+      "estado": "nunca",
+      "estadoCorto": "Toxina de setas",
+      "regulatorio": "Nunca comercializada. Es la toxina de Inocybe y Clitocybe y la herramienta con la que se definió el receptor muscarínico.",
       "accion": "Agonista muscarínico puro y no hidrolizable. Reproduce el cuadro colinérgico completo: miosis, lagrimeo, salivación, sudoración, broncorrea, vómitos, diarrea y bradicardia.",
       "indicacion": "Sin indicación terapéutica. Interés toxicológico: síndrome muscarínico por Inocybe y Clitocybe, tratado con atropina.",
       "diseno": "Amonio cuaternario sobre un anillo de tetrahidrofurano. La rigidez fija la distancia entre el nitrógeno y el oxígeno: la geometría que el receptor reconoce.",
@@ -191,10 +231,41 @@
         "SNC": 95,
         "DUR": 35
       },
+      "estado": "uso",
+      "estadoCorto": "Sin receta · sustitutiva",
+      "regulatorio": "Terapia sustitutiva sin receta en parches, chicles, comprimidos y espray.",
       "accion": "Agonista de los receptores nicotínicos neuronales, sobre todo α4β2. Los activa y a continuación los desensibiliza; la liberación de dopamina mesolímbica explica el refuerzo.",
       "indicacion": "Terapia sustitutiva con nicotina en deshabituación tabáquica: parches, chicles, comprimidos y espray.",
       "diseno": "Amina terciaria que cruza la barrera hematoencefálica sin dificultad. El primer paso hepático es alto, así que las formas de administración evitan la vía oral convencional.",
       "examen": "Activación seguida de desensibilización: el mismo fármaco estimula y luego apaga el receptor."
+    },
+    {
+      "id": "vareniclina",
+      "nombre": "Vareniclina",
+      "relevancia": 76,
+      "rol": "AGONISTA N PARCIAL",
+      "grupo": "agonista",
+      "badge": "α4β2 parcial",
+      "clase": "Benzazepina rígida · análoga de la citisina",
+      "formula": "C13H13N3",
+      "masa": 211.27,
+      "smiles": "c1cnc2cc3c(cc2n1)[C@@H]1CNC[C@H]3C1",
+      "estructura": "estructuras/vareniclina.svg",
+      "indices": {
+        "AFI": 85,
+        "SEL": 75,
+        "EST": 90,
+        "ORA": 95,
+        "SNC": 90,
+        "DUR": 75
+      },
+      "estado": "reintroducido",
+      "estadoCorto": "Lotes retirados 2021 · genérico",
+      "regulatorio": "En 2021 se retiraron lotes de Champix en la UE y Pfizer paró su distribución por una impureza, la N-nitroso-vareniclina, por encima del límite aceptable. Era un defecto de fabricación y no del principio activo, y el fármaco volvió al mercado español como genérico financiado.",
+      "accion": "Agonista parcial del receptor nicotínico α4β2: estimula lo justo para aliviar la abstinencia y, al ocupar el receptor, reduce la recompensa de la nicotina del tabaco.",
+      "indicacion": "Deshabituación tabáquica, por vía oral durante doce semanas.",
+      "diseno": "Esqueleto rígido inspirado en la citisina, un alcaloide natural: la amina secundaria protonada y el nitrógeno de la pirazina reproducen la distancia entre el catión y el aceptor de enlace de H de la nicotina.",
+      "examen": "Agonista parcial con doble efecto, menos ansiedad por fumar y menos placer al hacerlo. La comparamos con la nicotina de la terapia sustitutiva, que es agonista completo."
     },
     {
       "id": "neostigmina",
@@ -216,10 +287,69 @@
         "SNC": 5,
         "DUR": 45
       },
+      "estado": "uso",
+      "estadoCorto": "Reversión del bloqueo",
+      "regulatorio": "En uso. En la reversión del bloqueo neuromuscular compite hoy con el sugammadex, que encapsula el rocuronio sin tocar la enzima.",
       "accion": "Inhibidor reversible de la acetilcolinesterasa: carbamila la enzima y eleva la acetilcolina en la sinapsis. El efecto es nicotínico en la placa motora y muscarínico en el resto de la periferia.",
       "indicacion": "Miastenia gravis, reversión del bloqueo neuromuscular no despolarizante (asociada a atropina o glicopirrolato) e íleo paralítico o retención urinaria posoperatorios.",
       "diseno": "No toca el receptor: carbamila la enzima y deja que suba la acetilcolina del propio paciente. Cuaternaria, no entra en el SNC.",
       "examen": "La fisostigmina es terciaria y sí entra en el SNC: por eso revierte la intoxicación anticolinérgica central y la neostigmina no."
+    },
+    {
+      "id": "fisostigmina",
+      "nombre": "Fisostigmina",
+      "relevancia": 80,
+      "rol": "INHIBIDOR DE AChE",
+      "grupo": "ache",
+      "badge": "AChE central",
+      "clase": "Metilcarbamato terciario · alcaloide de Physostigma",
+      "formula": "C15H21N3O2",
+      "masa": 275.35,
+      "smiles": "CNC(=O)Oc1ccc2c(c1)[C@]1(C)CCN(C)[C@@H]1N2C",
+      "estructura": "estructuras/fisostigmina.svg",
+      "indices": {
+        "AFI": 85,
+        "SEL": 60,
+        "EST": 40,
+        "ORA": 20,
+        "SNC": 85,
+        "DUR": 25
+      },
+      "estado": "uso",
+      "estadoCorto": "Suministro irregular",
+      "regulatorio": "Anticholium (Alemania). En EE. UU. hay desabastecimiento desde 2021 y la FDA autorizó importar el producto alemán. En España no hay presentación comercial y se obtiene como medicamento en situaciones especiales.",
+      "accion": "Inhibidor reversible de la acetilcolinesterasa por carbamilación. Al ser terciaria, actúa también en el SNC.",
+      "indicacion": "Síndrome anticolinérgico central grave (atropina, escopolamina, solanáceas), por vía intravenosa lenta.",
+      "diseno": "Alcaloide del haba de Calabar con un metilcarbamato de fenol sobre un pirroloindol. La amina terciaria le permite cruzar la BHE, y el metilcarbamato es menos estable que el dimetilcarbamato de la neostigmina.",
+      "examen": "La emparejamos con la neostigmina: misma diana, pero la fisostigmina entra en el SNC y revierte el delirio anticolinérgico."
+    },
+    {
+      "id": "tacrina",
+      "nombre": "Tacrina",
+      "relevancia": 72,
+      "rol": "INHIBIDOR DE AChE · PIONERO",
+      "grupo": "ache",
+      "badge": "Alzheimer 1993",
+      "clase": "9-Amino-1,2,3,4-tetrahidroacridina · plana",
+      "formula": "C13H14N2",
+      "masa": 198.27,
+      "smiles": "Nc1c2c(nc3ccccc13)CCCC2",
+      "estructura": "estructuras/tacrina.svg",
+      "indices": {
+        "AFI": 70,
+        "SEL": 40,
+        "EST": 50,
+        "ORA": 60,
+        "SNC": 85,
+        "DUR": 25
+      },
+      "estado": "retirado",
+      "estadoCorto": "Hepatotoxicidad · 2013",
+      "regulatorio": "Cognex, autorizado por la FDA en 1993. Elevaba las transaminasas en casi la mitad de los pacientes y dejó de usarse en 2013, cuando ya había anticolinesterásicos más seguros.",
+      "accion": "Inhibidor reversible y no covalente de la acetilcolinesterasa y de la butirilcolinesterasa.",
+      "indicacion": "Enfermedad de Alzheimer leve o moderada (uso histórico, de 1993 a 2013), en cuatro tomas diarias.",
+      "diseno": "Aminoacridina plana que se apila en la garganta aromática de la enzima. El CYP1A2 la oxida a metabolitos reactivos, que son la causa de la hepatotoxicidad.",
+      "examen": "Es el punto de partida del donepezilo, que conserva la afinidad con un esqueleto no plano de bencilpiperidina e indanona y elimina la toxicidad hepática."
     },
     {
       "id": "donepezilo",
@@ -241,6 +371,9 @@
         "SNC": 90,
         "DUR": 88
       },
+      "estado": "uso",
+      "estadoCorto": "Aricept · genéricos",
+      "regulatorio": "Aricept y genéricos. Es, con la rivastigmina y la galantamina, el anticolinesterásico de referencia en el Alzheimer.",
       "accion": "Inhibidor reversible y no covalente de la acetilcolinesterasa, con clara preferencia por la enzima central frente a la butirilcolinesterasa. Aumenta la acetilcolina en corteza e hipocampo.",
       "indicacion": "Enfermedad de Alzheimer, en todos sus grados, por vía oral en una sola toma diaria.",
       "diseno": "Molécula alargada que ocupa a la vez el sitio catalítico y el periférico de la enzima. Rediseño racional desde la tacrina: sustituye su anillo planar de 1-aminoacridina, oxidado por el CYP1A2 a especies reactivas hepatotóxicas, por un armazón no plano de bencilpiperidina e indanona-5,6-dimetoxi que conserva la afinidad y elimina esa toxicidad. Amina terciaria lipófila para llegar al SNC, y semivida cercana a 70 h que permite la dosis única.",
@@ -266,10 +399,41 @@
         "SNC": 85,
         "DUR": 95
       },
+      "estado": "retirado",
+      "estadoCorto": "Paratión prohibido · UE 2001",
+      "regulatorio": "El paratión que dibuja la carta no es un medicamento: la UE decidió retirarlo como plaguicida en 2001 por su toxicidad aguda y figura en el Convenio de Rotterdam. Sarín, somán y tabún los prohíbe la Convención sobre Armas Químicas (1993).",
       "accion": "Fosforilan la serina del centro activo de la acetilcolinesterasa. La crisis colinérgica resultante es muscarínica, nicotínica y central a la vez: miosis, broncorrea, fasciculaciones, convulsiones y parálisis respiratoria.",
       "indicacion": "Sin indicación sistémica en humanos. El malatión tópico se usa en pediculosis; el resto son insecticidas agrícolas y agentes de guerra química.",
       "diseno": "El fósforo electrófilo sustituye al carbonilo del éster. En los tiofosfatos (paratión, malatión) el azufre del P=S resta electrofilia: son profármacos inactivos que el CYP hepático oxida a la forma P=O (paraoxón, malaoxón), la que fosforila realmente la enzima; el sarín y el resto de agentes de guerra ya son P=O y actúan sin bioactivación. El enlace envejece al perder un grupo alquilo y entonces la inhibición es permanente: esa es la carrera contra el reloj del tratamiento.",
       "examen": "Cuadro SLUDGE con miosis y fasciculaciones. Tratamiento: atropina para lo muscarínico y pralidoxima para reactivar la enzima."
+    },
+    {
+      "id": "ecotiopato",
+      "nombre": "Ecotiopato",
+      "relevancia": 62,
+      "rol": "INHIBIDOR IRREVERSIBLE · COLIRIO",
+      "grupo": "ache",
+      "badge": "AChE ocular",
+      "clase": "Fosforotioato con colina cuaternaria",
+      "formula": "C9H23NO3PS+",
+      "masa": 256.33,
+      "smiles": "CCOP(=O)(OCC)SCC[N+](C)(C)C",
+      "estructura": "estructuras/ecotiopato.svg",
+      "indices": {
+        "AFI": 92,
+        "SEL": 20,
+        "EST": 95,
+        "ORA": 2,
+        "SNC": 5,
+        "DUR": 95
+      },
+      "estado": "descatalogado",
+      "estadoCorto": "Phospholine Iodide · 2021",
+      "regulatorio": "Pfizer, su único fabricante, dejó de suministrar Phospholine Iodide en EE. UU. en 2021 por problemas de la cadena de suministro, sin alerta de seguridad.",
+      "accion": "Inhibidor irreversible de la acetilcolinesterasa por fosforilación de la serina del centro activo. Miosis intensa y prolongada.",
+      "indicacion": "Glaucoma y esotropía acomodativa, en colirio (uso histórico).",
+      "diseno": "Une un fosforotioato electrófilo y una colina cuaternaria: el amonio lo dirige al sitio aniónico de la enzima, igual que a la acetilcolina, y le impide cruzar la BHE.",
+      "examen": "Es el organofosforado convertido en medicamento: el mismo mecanismo que el sarín, pero cuaternario y en colirio, con acción local."
     },
     {
       "id": "pralidoxima",
@@ -291,6 +455,9 @@
         "SNC": 5,
         "DUR": 30
       },
+      "estado": "uso",
+      "estadoCorto": "Antídoto hospitalario",
+      "regulatorio": "Antídoto de organofosforados, siempre con atropina. En EE. UU. existe también en autoinyector junto a la atropina (DuoDote).",
       "accion": "Nucleófilo que ataca el fósforo unido a la enzima, lo desplaza y devuelve la acetilcolinesterasa a su estado activo. No bloquea receptores: no alivia por sí misma los síntomas muscarínicos.",
       "indicacion": "Intoxicación por organofosforados, siempre asociada a atropina. Solo es eficaz antes de que la unión envejezca.",
       "diseno": "El amonio cuaternario la ancla al sitio aniónico de la enzima y coloca la oxima frente al fósforo. Ese mismo cuaternario le impide entrar en el SNC.",
@@ -316,6 +483,9 @@
         "SNC": 70,
         "DUR": 60
       },
+      "estado": "uso",
+      "estadoCorto": "Colirio 0,01 % · miopía",
+      "regulatorio": "En uso en todas sus indicaciones clásicas. En 2025 la Comisión Europea autorizó un colirio al 0,01 % (Ryjunea) para frenar la progresión de la miopía infantil.",
       "accion": "Antagonista competitivo de todos los subtipos muscarínicos. Produce midriasis y cicloplejía, taquicardia, broncodilatación, y reduce secreciones y motilidad digestiva.",
       "indicacion": "Bradicardia sintomática, premedicación anestésica, intoxicación por organofosforados y por setas muscarínicas, y midriasis diagnóstica.",
       "diseno": "Éster voluminoso que ocupa el sitio del agonista sin activarlo: el ácido trópico impide el cambio conformacional. Es el racemato (±)-hiosciamina, con el carbono α del ácido trópico fácilmente racemizable; solo el enantiómero S tiene afinidad relevante por el receptor. Amina terciaria, así que entra en el SNC y a dosis altas da delirio anticolinérgico.",
@@ -341,6 +511,9 @@
         "SNC": 2,
         "DUR": 40
       },
+      "estado": "uso",
+      "estadoCorto": "Buscapina",
+      "regulatorio": "Buscapina, por vía oral, rectal e inyectable.",
       "accion": "Antagonista muscarínico de acción periférica, con efecto espasmolítico sobre el músculo liso digestivo, biliar y genitourinario. También bloquea ganglios a dosis altas.",
       "indicacion": "Dolor de tipo cólico abdominal, biliar y renal, y espasmos del tracto digestivo y genitourinario.",
       "diseno": "Cuaternizar la escopolamina la deja fuera del SNC: desaparecen sedación y delirio y queda el efecto periférico. El precio es una biodisponibilidad oral baja.",
@@ -366,10 +539,41 @@
         "SNC": 88,
         "DUR": 55
       },
+      "estado": "uso",
+      "estadoCorto": "Artane",
+      "regulatorio": "Artane. La familia de antimuscarínicos antiparkinsonianos apenas se ha renovado: el biperideno sigue en uso y la benztropina solo se comercializa en EE. UU.",
       "accion": "Antagonista muscarínico central con preferencia relativa por M1. Restaura el equilibrio entre dopamina y acetilcolina en el estriado, sobre todo en el control del temblor.",
       "indicacion": "Parkinsonismo, en especial el temblor de reposo, y síntomas extrapiramidales inducidos por antipsicóticos.",
       "diseno": "Amina terciaria lipófila, diseñada para llegar al estriado. La preferencia por M1 reduce, sin eliminar, la sequedad de boca y la retención urinaria.",
       "examen": "Anticolinérgico central: mal tolerado en mayores por confusión, visión borrosa y retención urinaria."
+    },
+    {
+      "id": "tubocurarina",
+      "nombre": "Tubocurarina",
+      "relevancia": 78,
+      "rol": "BLOQUEANTE NEUROMUSCULAR · PROTOTIPO",
+      "grupo": "antagonista",
+      "badge": "nAChR muscular",
+      "clase": "Bisbencilisoquinolina · curare de Chondrodendron",
+      "formula": "C37H41N2O6+",
+      "masa": 609.74,
+      "smiles": "COc1cc2c3cc1Oc1cc(ccc1O)C[C@@H]1c4c(cc(OC)c(O)c4Oc4ccc(cc4)C[C@@H]3N(C)CC2)CC[N+]1(C)C",
+      "estructura": "estructuras/tubocurarina.svg",
+      "indices": {
+        "AFI": 85,
+        "SEL": 55,
+        "EST": 80,
+        "ORA": 2,
+        "SNC": 2,
+        "DUR": 70
+      },
+      "estado": "descatalogado",
+      "estadoCorto": "Desplazada por el atracurio",
+      "regulatorio": "Dejó la práctica anestésica por la hipotensión que causaba al liberar histamina y bloquear ganglios. No hubo alerta formal: la sustituyeron bloqueantes mejor tolerados.",
+      "accion": "Antagonista competitivo del receptor nicotínico de la placa motora: parálisis flácida sin fasciculaciones. Libera histamina y bloquea ganglios.",
+      "indicacion": "Relajación muscular en anestesia (uso histórico desde 1942).",
+      "diseno": "Bisbencilisoquinolina con un amonio cuaternario y una amina terciaria protonada a pH fisiológico, separados por la distancia que encaja con los dos sitios del receptor. De ella salieron el atracurio y el cisatracurio.",
+      "examen": "El veneno de flechas convertido en el primer relajante muscular. Se revierte con neostigmina, porque compite con la acetilcolina."
     },
     {
       "id": "atracurio",
@@ -391,6 +595,9 @@
         "SNC": 2,
         "DUR": 40
       },
+      "estado": "uso",
+      "estadoCorto": "Desplazado por cisatracurio",
+      "regulatorio": "En uso, aunque muchos hospitales prefieren el cisatracurio (Nimbex), uno de sus isómeros, que libera menos laudanosina e histamina.",
       "accion": "Antagonista competitivo del receptor nicotínico de la placa motora: impide que la acetilcolina despolarice la fibra y produce parálisis flácida sin fasciculaciones previas.",
       "indicacion": "Relajación muscular en anestesia general y para facilitar la intubación y la ventilación mecánica. Se revierte con neostigmina más atropina.",
       "diseno": "Dos amonios cuaternarios separados por una cadena que reproduce la distancia entre los dos sitios de unión del receptor. Se elimina por vía de Hofmann, espontánea y no dependiente de hígado ni riñón.",

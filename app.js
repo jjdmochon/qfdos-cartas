@@ -70,7 +70,7 @@ class CartasApp {
           nombre: 'Transmisión Colinérgica',
           archivo: './data/farmacos-tema01.json',
           disponible: true,
-          totalFarmacos: 15
+          totalFarmacos: 20
         }
       ];
       this.renderTopicPills();
